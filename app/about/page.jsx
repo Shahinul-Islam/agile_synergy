@@ -1,71 +1,67 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
+// import { Button } from "@/components/ui/button";
 import TeamSection from "@/components/team-section";
 import OurValues from "../../components/our-values";
+import Link from "next/link";
+import WhatWeDo from "../../components/WhatWeDo";
+import StatisticsSection from "../../components/StatisticsSection";
 
 export default function AboutPage() {
 	return (
 		<div className="container mx-auto py-20 px-6 space-y-20">
-			<section className="text-center">
-				<h1 className="text-4xl font-bold mb-6">About DigiMarkPro</h1>
-				<p className="text-xl mb-8">
-					We are a team of passionate digital marketers dedicated to helping
-					businesses thrive in the digital landscape.
-				</p>
-			</section>
+			<WhatWeDo />
+			<StatisticsSection/>
 
-			<section className="relative bg-gray-50 py-16 px-6 sm:px-12 md:px-24 lg:px-48 text-center overflow-hidden">
-				<div className="absolute inset-0 z-0"></div>
-
-				<div className="relative z-10 max-w-4xl mx-auto animate-fadeIn">
-					<h2 className="text-4xl font-extrabold text-gray-800 mb-4 animate-slideInUp">
-						Our Mission
-					</h2>
-					<p className="text-lg text-gray-600 mb-8 animate-fadeIn delay-100">
-						At DigiMarkPro, our mission is to empower businesses with innovative
-						digital marketing solutions that drive growth and success in the
-						ever-evolving online world.
-					</p>
-					<Button className="px-6 py-3 text-white bg-primary hover:bg-primary/90 transition-all rounded-lg animate-fadeIn delay-200">
-						Learn More
-					</Button>
+			<section className="w-full py-12 md:py-24 lg:py-32 bg-muted">
+				<div className="container grid items-center justify-center gap-8 px-4 md:px-6 lg:grid-cols-2 lg:gap-16">
+					<div className="space-y-4">
+						<div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">
+							Our Mission
+						</div>
+						<h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+							Empowering Businesses Through Digital Innovation
+						</h2>
+						<p className="max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+							At our digital agency, we are driven by a deep passion for
+							creating transformative digital experiences that drive business
+							growth. Our mission is to empower our clients with cutting-edge
+							technology, strategic insights, and creative solutions that help
+							them thrive in the digital landscape.
+						</p>
+						<p className="max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+							We believe that technology is a powerful tool for unlocking new
+							possibilities, and we are committed to leveraging it to help our
+							clients achieve their goals. From web development and mobile
+							applications to digital marketing and data analytics, we offer a
+							comprehensive suite of services designed to drive measurable
+							results.
+						</p>
+						<div className="flex justify-start space-x-4">
+							<Link
+								href="#"
+								className="inline-flex h-9 items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+								prefetch={false}
+							>
+								Learn More
+							</Link>
+							<Link
+								href="#"
+								className="inline-flex h-9 items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+								prefetch={false}
+							>
+								Contact Us
+							</Link>
+						</div>
+					</div>
+					<img
+						src="/placeholder.svg"
+						width="500"
+						height="500"
+						alt="Our Mission"
+						className="mx-auto aspect-square overflow-hidden rounded-xl object-cover object-center sm:w-full"
+					/>
 				</div>
-
-				<style>{`
-					.animate-fadeIn {
-						animation: fadeIn 1.5s ease-in-out;
-					}
-					.animate-slideInUp {
-						animation: slideInUp 1.2s ease-in-out;
-					}
-					.delay-100 {
-						animation-delay: 0.1s;
-					}
-					.delay-200 {
-						animation-delay: 0.2s;
-					}
-
-					@keyframes fadeIn {
-						from {
-							opacity: 0;
-						}
-						to {
-							opacity: 1;
-						}
-					}
-
-					@keyframes slideInUp {
-						from {
-							transform: translateY(30px);
-							opacity: 0;
-						}
-						to {
-							transform: translateY(0);
-							opacity: 1;
-						}
-					}
-				`}</style>
 			</section>
 
 			<TeamSection />
