@@ -6,6 +6,8 @@ import OurValues from "../../components/our-values";
 import Link from "next/link";
 import WhatWeDo from "../../components/WhatWeDo";
 import StatisticsSection from "../../components/StatisticsSection";
+import ClientsSection from "../../components/ClientsSection";
+import CTASection from "../../components/cta-section";
 
 export default function AboutPage() {
 	return (
@@ -66,6 +68,8 @@ export default function AboutPage() {
 
 			<TeamSection />
 			<OurValues />
+			<ClientsSection/>
+			<CTASection/>
 		</div>
 	);
 }
